@@ -4,8 +4,6 @@
 
 // dance dance and dance
 
-// testing testing testing
-
 
 /////
 // For installation, upgrading, documentations, and tutorials, check out our website!
@@ -15,8 +13,8 @@
 // Chassis constructor
 ez::Drive chassis(
     // These are your drive motors, the first motor is used for sensing!
-    {1, 2, 3},     // Left Chassis Ports (negative port will reverse it!)
-    {-4, -5, -6},  // Right Chassis Ports (negative port will reverse it!)
+    {-13, -14, -15},     // Left Chassis Ports (negative port will reverse it!)
+    {1,2,3 },  // Right Chassis Ports (negative port will reverse it!)
 
     7,      // IMU Port
     4.125,  // Wheel Diameter (Remember, 4" wheels without screw holes are actually 4.125!)
@@ -249,7 +247,7 @@ void ez_template_extras() {
 void opcontrol() {
   // This is preference to what you like to drive on
   chassis.drive_brake_set(MOTOR_BRAKE_COAST);
-
+  
   while (true) {
     // Gives you some extras to make EZ-Template ezier
     ez_template_extras();
